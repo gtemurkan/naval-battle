@@ -14,5 +14,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if not data:
                 break
             expr = data.decode('utf-8')
-            result = str(eval(expr))
+            result = str(eval(expr)) + '\n'
             conn.sendall(result.encode('utf-8'))
